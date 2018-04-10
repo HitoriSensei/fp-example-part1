@@ -1,0 +1,8 @@
+{
+  "scripts": {
+    "start": "babel *.js --presets env -d dist && node dist/index.js"
+  },
+  "dependencies": {
+    "babel-preset-env": "^1.6.1"
+  }
+}
