@@ -1,6 +1,5 @@
 export default {
     enrich(books, user) {
-        books.push('personalized ad for '+user)
-        return books
+        return books.concat('personalized ad for '+user)
     }
 }

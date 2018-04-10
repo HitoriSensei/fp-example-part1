@@ -27,13 +27,12 @@ export default class Library {
         let currentBookCount = this.books.length
         // make sure that we have enough space
         return this.allocateSpaceForNewBooks(currentBookCount + newBooks.length)
-            .then(() => {
-                // and then add the books to the library
-                this.books.splice(currentBookCount, 0, newBooks)
-            })
+            .then(() => new Library(
+                this.books.concat(newBooks)
+            ))
     }
 
     clearLibrary() {
-        this.books = undefined
+        return new Library(undefined)
     }
 }

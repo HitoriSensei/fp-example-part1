@@ -18,8 +18,8 @@ setTimeout(() => {
     let newBooks = ['harry potter', 'on the road']
     library
         .addBooks(newBooks)
-        .then(() => {
-            for(let book of library.books) {
+        .then((newLibrary) => {
+            for(let book of newLibrary.books) {
                 console.log(`I have a book titled ${book}`)
             }
         })
